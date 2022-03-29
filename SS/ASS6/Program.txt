@@ -1,0 +1,9 @@
+#include<stdioh>
+
+int main()
+{
+    a = b+c;
+    float a,b,c;
+    printf("Hello");
+    return 0;
+}
