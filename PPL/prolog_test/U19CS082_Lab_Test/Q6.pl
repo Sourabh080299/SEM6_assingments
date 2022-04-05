@@ -1,0 +1,1 @@
+plan(X):-reverse(X,Z),Z==X.
