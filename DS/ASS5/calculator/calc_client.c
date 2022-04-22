@@ -24,7 +24,7 @@ calc_prog_1(char *host,float x, float y, int choice)
 
 	input_arg.a=x;
 	input_arg.b=y;
-
+    
 	if(choice==1)
 		result = add_1(&input_arg, clnt);
 	if(choice==2)
