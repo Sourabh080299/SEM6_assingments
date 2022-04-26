@@ -4,8 +4,7 @@ function sub1()
     document.write("x = " + x + "<br />");
 }
 function sub2()
-{
-    var x; 
+{    var x;
     x = 10;
     sub1();
 }
