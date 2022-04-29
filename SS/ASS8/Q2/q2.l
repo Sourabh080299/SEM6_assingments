@@ -1,4 +1,4 @@
-%{
+%{  
     int vow_count=0;
     int const_count =0;
 %}

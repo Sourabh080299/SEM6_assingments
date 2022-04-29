@@ -9,6 +9,35 @@ mul "*"
 div "/"
 pow "^"
 ln \n
+
+int digi()
+{
+    if(op==0)
+    /* atof() is used to convert
+    - the ASCII input to float */
+    a=atof(yytext);
+    else
+    {
+    b=atof(yytext);
+    switch(op)
+    {
+    case 1:a=a+b;
+    break;
+    case 2:a=a-b;
+    break;
+    case 3:a=a*b;
+    break;
+    case 4:a=a/b;
+    break;
+    case 5:for(i=a;b>1;b--)
+    a=a*i;
+    break;
+    }
+    op=0;
+    }
+    return 0;
+}
+
 %%
 {dig} {digi();}
 {add} {op=1;}
@@ -18,37 +47,16 @@ ln \n
 {pow} {op=5;}
 {ln} {printf("\n The Answer :%f\n\n",a);}
 %%
-digi()
+
+
+int main(int argv,char *argc[])
 {
-if(op==0)
-/* atof() is used to convert
-- the ASCII input to float */
-a=atof(yytext);
-else
-{
-b=atof(yytext);
-switch(op)
-{
-case 1:a=a+b;
-break;
-case 2:a=a-b;
-break;
-case 3:a=a*b;
-break;
-case 4:a=a/b;
-break;
-case 5:for(i=a;b>1;b--)
-a=a*i;
-break;
+    printf("enter:");
+    yylex();
+    return 0;
 }
-op=0;
-}
-}
-main(int argv,char *argc[])
+
+int yywrap()
 {
-yylex();
-}
-yywrap()
-{
-return 1;
+    return 1;
 }

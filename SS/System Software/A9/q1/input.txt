@@ -1,0 +1,3 @@
+int hi 9 
+float x y
+23 struct class z

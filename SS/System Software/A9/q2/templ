@@ -1,0 +1,7 @@
+%%
+        [0-7]+ {
+            printf("\n-> Octal Number\n");
+        }
+        .[A-F]|[1-9] {
+            printf("\n-> Hexadecimal Number\n");
+        }
